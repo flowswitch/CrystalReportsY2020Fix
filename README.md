@@ -35,7 +35,30 @@ pdbxbse.dll:
 0002C6CF: 7F -> 90  
 0002C6D0: 30 -> 90  
 
+p2bxbse.dll:  
+  size: 261632  
+  FileVersion: 5.0.0.20  
+  sha256sum: 60ebb8901b206ff28c3fe7228226b36dbdf00980c278c1eb2c4ebaf946ce7892  
+0000D58F: 0F -> 90  
+0000D590: 8F -> 90  
+0000D591: 54 -> 90  
+0000D592: 00 -> 90  
+0000D593: 00 -> 90  
+0000D594: 00 -> 90  
+00015609: 0F -> 90  
+0001560A: 8F -> 90  
+0001560B: 40 -> 90  
+0001560C: 00 -> 90  
+0001560D: 00 -> 90  
+0001560E: 00 -> 90  
+  
+
 ### Other versions
-Try looking for byte sequence 77 7F xx, replace 7F xx with 90 90. Version 4.x has two checks - patch both.
+#### Variant 1
+Try looking for byte sequence 77 7F xx, replace 7F xx with 90 90. Some versions have two checks - patch both.
+
+#### Variant 2
+Try looking for byte sequence 77 0F 8F xx xx xx xx, replace 0F 8F xx xx xx xx with 90 90 90 90 90 90. Some versions have two checks - patch both.
+
 Or open an issue here and share your dll for analysis.
 
